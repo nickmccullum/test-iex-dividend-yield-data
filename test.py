@@ -3,7 +3,7 @@ import numpy as np
 from secrets import IEX_CLOUD_API_KEY
 
 stocks = pd.read_csv('wilshire_5000_stocks.csv', header=None)
-print(stocks)
+
 n = 100
 lists_of_stocks = np.array([stocks[0][q:q + n] for q in range(0, len(stocks[0]), n)])
 output_dataframe = pd.DataFrame()
